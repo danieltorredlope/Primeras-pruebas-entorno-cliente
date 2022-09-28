@@ -1,0 +1,23 @@
+<DOCTYPE! html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>Fecha0</title>
+    </head>
+    <body>
+        <div id="hora"></div>
+        <script>
+            var miFecha = new Date();
+            var texto = document.getElementById("hora");
+            texto.innerHTML=miFecha;
+        </script>
+
+         <div id="hora"></div>
+         <script>
+             var miFecha = new Date();
+             var texto = document.getElementById("hora");
+             texto.innerHTML=miFecha.getHours()+":"+miFecha.getMinutes()+"+"+miFecha.getSeconds();
+         </script>
+    </body>
+
+</html>
