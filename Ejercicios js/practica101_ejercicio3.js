@@ -7,8 +7,9 @@ que muestre una ventana emergente con el valor de la variable saludo
     Muestra la variable desde fuera de la función mediante un window.alert
 */
 function saludar() {
-    var saludo="Hola";
-    alert(saludo);
+var saludo = "Hola";
+alert(saludo);
+
 }
 
 saludar();
@@ -44,8 +45,9 @@ function ambito() {
     window.alert(numero);
 }
 
-ambito();
 window.alert(numero);
+ambito();
+
 
 /*
 Declara y define una variable global. Redefínela dentro de una función que la muestre mediante un window.alert.
