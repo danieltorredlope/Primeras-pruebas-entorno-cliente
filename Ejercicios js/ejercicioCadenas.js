@@ -9,3 +9,4 @@ ciclo += "Hay 3 ciclos formativos de grado superior\n";
 ciclo += dam+", "+daw+" y "+asir;
 
 alert(ciclo);
+alert( "la lengitud de esta cadena es: " + ciclo.length);
