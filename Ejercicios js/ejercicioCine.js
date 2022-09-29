@@ -8,7 +8,7 @@ while (typeof (nombreCliente) != 'string' || typeof (nombreCliente) == null) {
 }
 
 //1. comprobamos que la edad del cliente sea un numero y que no sea nulo, si no es así insistimos
-let edadCliente = prompt("Dígame su edad, por favor");
+let edadCliente = parseInt(prompt("Dígame su edad, por favor"));
 alert(typeof (edadCliente));
 
 while (typeof(edadCliente) != 'number' || typeof(edadCliente) == null) {
