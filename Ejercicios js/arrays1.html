@@ -11,6 +11,7 @@
         var txt2 = "";
         var dias = ["lunes","martes","miercoles","jueves","viernes","sabado","domingo"];
 
+        //Esta es una forma de recorrerlo mediante una funcion
         dias.forEach(muestra);
         document.getElementById("aqui").innerHTML = txt;
 
@@ -19,13 +20,14 @@
                 txt = txt + valor + " ";
             }
             
-        document.getElementById("aqui").innerHTML += '<br>--------<br>';
+        document.getElementById("aqui").innerHTML += '<br>----------<br>';
 
+        //Esta forma de recorrerlo es mediante un bucle for
         for(i=0;i<dias.length;i++){
             txt2 = txt2 + dias[i] + " ";
         }
 
-        document.getElementById("aqui").innerHTML = txt2;
+        document.getElementById("aqui").innerHTML += txt2;
             
     </script>
 </body>
