@@ -79,3 +79,9 @@ console.log("Edad: "+edadCliente);
 console.log("Película"+peliculaCliente);
 console.log("Comida: "+comidaCliente);
 console.log("Descuento: "+descuentoCliente);
+
+document.body.innerHTML += "<p>Nombre: "+nombreCliente+"</p>\n";
+document.body.innerHTML += "<p>Edad: "+edadCliente+"</p>\n";
+document.body.innerHTML += "<p>Película: "+peliculaCliente+"</p>\n";
+document.body.innerHTML += "<p>Comida: "+comidaCliente+"</p>\n";
+document.body.innerHTML += "<p>Descuento: "+descuentoCliente+"</p>\n";
