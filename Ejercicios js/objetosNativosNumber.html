@@ -8,7 +8,11 @@
     
     </body>
     <script>
-        let baseDiez=128;
-        alert("El número "+baseDiez+" en base 2 es: "+baseDiez.toString(2));
+        /*let baseDiez=128;
+        alert("El número "+baseDiez+" en base 2 es: "+baseDiez.toString(2));*/
+        let baseDiez=Number(prompt("Dígame el numero inicial, por favor"));
+        let cambioBase=Number(prompt("Dígame la base a la que quiere cambiar, por favor"));
+
+        alert("El número introducido es "+baseDiez+", se solicita la base "+cambioBase+", el resultado es: "+baseDiez.toString(cambioBase));
     </script>
 </html>
