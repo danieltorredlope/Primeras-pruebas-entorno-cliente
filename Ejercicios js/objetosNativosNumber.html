@@ -14,5 +14,13 @@
         let cambioBase=Number(prompt("Dígame la base a la que quiere cambiar, por favor"));
 
         alert("El número introducido es "+baseDiez+", se solicita la base "+cambioBase+", el resultado es: "+baseDiez.toString(cambioBase));
+
+        //Aquí trabajos con Infinity e -Infinity
+        let inf = 2;
+        while (inf != Infinity) {
+            alert(inf);
+            inf=inf*inf;//inf*=inf
+        }
+
     </script>
 </html>
