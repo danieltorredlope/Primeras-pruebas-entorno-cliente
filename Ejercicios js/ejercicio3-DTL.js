@@ -13,8 +13,8 @@ alert(saludo);
 }
 
 saludar();
-var saludo = saludar();
-window.alert(saludo);
+//window.alert(saludo);
+
 
 /*
 Define una variable global despedida=”Adiós” fuera de una función despedir( ) que muestre
