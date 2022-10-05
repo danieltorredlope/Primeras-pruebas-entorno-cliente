@@ -8,21 +8,24 @@
 
     <script>
         //Obtener los días que han pasado entre hoy y otra fecha fija.
-        let fechaActual = new Date();
-        const fechaFija = Date.parse('05 Dec 2012 00:12:00 GMT');
+        let fechaActual = new Date(); //Obtenemos la fecha actual
+        let fechaFija = Date.parse('05 Dec 2012 00:12:00 GMT'); //Obtenemos una fecha fija en milisegundos
         //let fechaActMiliseg = fechaActual.getTime();
-        let fechaActMiliseg = Date.now();
+        let fechaActMiliseg = Date.now(); //Transformamos la fecha actual a milisegundos
         console.log(fechaActMiliseg);
         console.log(fechaFija);
 
-        let diferenciaEntreFechas = fechaActMiliseg - fechaFija;
+        let diferenciaEntreFechas = fechaActMiliseg - fechaFija; //Restamos la diferencia de milisegundos entra la fecha actual y la fija.
         console.log(diferenciaEntreFechas);
 
-        let conversionMilisecDias = 86400000;
-        let diferenciaDias = diferenciaEntreFechas / conversionMilisecDias;
-        diferenciaDias = Math.round(diferenciaDias);
+        let conversionMilisecDias = 86400000; //Declaramos una variable que nos permitirá transformar la diferencia en milisegundos a días
+        let diferenciaDias = diferenciaEntreFechas / conversionMilisecDias; //Dividimos la diferencia de milisegundos 
+                                                                            //por la variable que hemos declarado
+
+        diferenciaDias = Math.round(diferenciaDias);//Redondeamos el resultado
 
         alert("Desde el día 5 de Diciembre de 2012 hasta el día de hoy, han pasado "+diferenciaDias+" días");
+
     </script>
 </body>
 </html>
