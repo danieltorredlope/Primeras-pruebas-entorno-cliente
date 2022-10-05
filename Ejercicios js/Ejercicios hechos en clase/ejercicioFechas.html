@@ -9,7 +9,11 @@
     <script>
         //Obtener los días que han pasado entre hoy y otra fecha fija.
         let fechaActual = new Date(); //Obtenemos la fecha actual
-        let fechaFija = Date.parse('05 Dec 2012 00:12:00 GMT'); //Obtenemos una fecha fija en milisegundos
+        let fechaFija = Date.parse('01 Oct 2022 00:12:00 GMT'); //Obtenemos una fecha fija en milisegundos
+        
+        //let fechaFija = Date.parse(2022/10/1); >> En este caso, con este formato yy/mm/dd, el mes va de 0 a 11, por lo que
+        //en este caso se correspondería con el 1 de noviembre de 2022
+
         //let fechaActMiliseg = fechaActual.getTime();
         let fechaActMiliseg = Date.now(); //Transformamos la fecha actual a milisegundos
         console.log(fechaActMiliseg);
@@ -24,7 +28,7 @@
 
         diferenciaDias = Math.round(diferenciaDias);//Redondeamos el resultado
 
-        alert("Desde el día 5 de Diciembre de 2012 hasta el día de hoy, han pasado "+diferenciaDias+" días");
+        alert("Desde el día 1 de Octubre de 2022 hasta el día de hoy, han pasado "+diferenciaDias+" días");
 
     </script>
 </body>
