@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio fechas</title>
+</head>
+<body>
+
+    <script>
+        //Obtener los días que han pasado entre hoy y otra fecha fija.
+        let fechaActual = new Date();
+        const fechaFija = Date.parse('05 Dec 2012 00:12:00 GMT');
+        //let fechaActMiliseg = fechaActual.getTime();
+        let fechaActMiliseg = Date.now();
+        console.log(fechaActMiliseg);
+        console.log(fechaFija);
+
+        let diferenciaEntreFechas = fechaActMiliseg - fechaFija;
+        console.log(diferenciaEntreFechas);
+
+        let conversionMilisecDias = 86400000;
+        let diferenciaDias = diferenciaEntreFechas / conversionMilisecDias;
+        diferenciaDias = Math.round(diferenciaDias);
+
+        alert("Desde el día 5 de Diciembre de 2012 hasta el día de hoy, han pasado "+diferenciaDias+" días");
+    </script>
+</body>
+</html>
