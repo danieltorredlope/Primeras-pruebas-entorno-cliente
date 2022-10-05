@@ -10,7 +10,7 @@
         //Obtener los días que han pasado entre hoy y otra fecha fija.
         let fechaActual = new Date(); //Obtenemos la fecha actual
         let fechaFija = Date.parse('01 Oct 2022 00:12:00 GMT'); //Obtenemos una fecha fija en milisegundos
-        
+
         //let fechaFija = Date.parse(2022/10/1); >> En este caso, con este formato yy/mm/dd, el mes va de 0 a 11, por lo que
         //en este caso se correspondería con el 1 de noviembre de 2022
 
@@ -23,6 +23,7 @@
         console.log(diferenciaEntreFechas);
 
         let conversionMilisecDias = 86400000; //Declaramos una variable que nos permitirá transformar la diferencia en milisegundos a días
+        //let conversionMilisecDias = 24*60*60*1000 >> Esta sería la operación que da 86400000 >> horas * minutos * segundos * milisegundos
         let diferenciaDias = diferenciaEntreFechas / conversionMilisecDias; //Dividimos la diferencia de milisegundos 
                                                                             //por la variable que hemos declarado
 
