@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio DNI</title>
+</head>
+<body>
+    
+</body>
+    <script>
+        //Haz una función a la que se le pasa un DNI y devolverá si es correcto o no. La letra que debe corresponder 
+        //a un DNI correcto se obtiene dividiendo la parte numérica entre 23 y cogiendo de la cadena 'TRWAGMYFPDXBNJZSQVHLCKE' 
+        //la letra correspondiente al resto de la división. Por ejemplo, si el resto es 0 la letra será la T y si es 4 será la G.
+        //Prueba la función en la consola con tu DNI.
+
+        let dni = '51496575N';
+        let numDni = 51496575;
+        let arrayDni = ['T','R','W','A','G','M','Y','F','P','D','X','B','N','J','Z','S','Q','V','H','L','C','K','E'];
+        let moduloLetra = 23;
+
+        function calcularLetraDni (numDni){
+            let posicionLetra = numDni % moduloLetra;
+            console.log(arrayDni[posicionLetra]);
+            
+            let copiaArray = arrayDni.slice(posicionLetra,posicionLetra+1);
+            console.log(copiaArray);
+
+            let cadena = numDni + copiaArray;
+
+            if (cadena == dni){
+                window.alert("El dni "+cadena+" es correcto");
+            } else {
+                window.alert("El dni "+cadena+" es incorrecto")
+            }
+
+        }
+        calcularLetraDni(numDni);
+        
+    
+        
+    </script>
+</html>

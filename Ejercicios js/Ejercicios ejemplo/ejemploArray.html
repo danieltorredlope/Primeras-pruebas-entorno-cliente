@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>Ejemplo arrays</title>
+</head>
+<body>
+    
+</body>
+<script>
+    let miArray = [1,2,3,4,5];
+    console.log(miArray);
+    miArray.splice(2,0,3.5);//con esto añadimos en la posicion 2 del array, sin eliminar ningun elemento, el elemnto 3.5
+    let copiaDemiArray = miArray.slice(0,2);//Hacemos una copia del array desde la posicion 0, a la 2
+    let miCopia2 = miArray.slice();//Hacemos una copia exacta del array al no indicar nada dentro del slice.
+    
+
+    console.log(miArray);
+    console.log(copiaDemiArray);
+    console.log(miCopia2);
+</script>
+</html>
