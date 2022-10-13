@@ -1,8 +1,6 @@
-
-let miArrayNotas = [5.4, 5, 3, 2, 2.4, 6, 6, 9];
-
 //Primera forma de hacerlo
 /*
+let miArrayNotas = [5.4, 5, 3, 2, 2.4, 6, 6, 9];
 let miArrayAprobados=[];
 
 for (let i = 0; i < miArrayNotas.length; i++) {
@@ -37,5 +35,7 @@ let miArrayAprobados = miArrayNotas.filter(function(nota){
 console.log(miArrayAprobados);*/
 
 //Cuarta forma de hacerlo
+let miArrayNotas = [5.4, 5, 3, 2, 2.4, 6, 6, 9];
+
 let miArrayAprobados = miArrayNotas.filter(nota => nota >= 5);
 console.log(miArrayAprobados);
