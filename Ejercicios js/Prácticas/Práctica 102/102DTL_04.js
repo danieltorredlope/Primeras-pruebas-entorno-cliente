@@ -52,30 +52,41 @@ if (opcionUsuario != null){
             break;
 
         case 3:
-            let nombre = prompt ("Introduzca el nombre del nuevo contacto");
-            let telefono = prompt("Introduzca el telefono del nuevo contacto");
-            let correo = prompt("Introduzca el correo del nuevo contacto");
+            let nombreContacto = prompt ("Introduzca el nombre del nuevo contacto");
+            let telefonoContacto = prompt("Introduzca el telefono del nuevo contacto");
+            let correoContacto = prompt("Introduzca el correo del nuevo contacto");
 
             if (nombre == null || telefono == null || correo == null) {
                 do {
+                    prompt("No has introducido todos los campos requeridos, por favor vuelvelos a introducir");
+
+                    nombreContacto = prompt ("Introduzca el nombre del nuevo contacto");
+                    telefonoContacto = prompt("Introduzca el telefono del nuevo contacto");
+                    correoContacto = prompt("Introduzca el correo del nuevo contacto");
                     
                 } while (nombre == null || telefono == null || correo == null);
+
+                array.push({
+                    nombre: nombreContacto,
+                    telefono: telefonoContacto,
+                    correo: correoContacto
+                }
+            } else{
+                array.push({
+                    nombre: nombreContacto,
+                    telefono: telefonoContacto,
+                    correo: correoContacto
+                }
             }
+    
             break;
 
         default:
             prompt("La opción seleccionada no es válida");
     }
-} else {
+    } else {
     opcionUsuario = prompt("Opción no válida, por favor seleccione la 1, la 2 o la 3");
 }
-array.push({
-    nombre: prompt("Introduce el nombre del nuevo contacto, por favor"),
-    telefono: prompt("Introduce el teléfono del nuevo contacto, por favor"),
-    correo: prompt("Introduce el correo del nuevo contacto, por favor")
-}
-
-);
 
 console.log(array);
 
