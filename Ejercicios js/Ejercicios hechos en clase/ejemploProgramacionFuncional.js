@@ -38,5 +38,4 @@ console.log(miArrayAprobados);*/
 
 //Cuarta forma de hacerlo
 let miArrayAprobados = miArrayNotas.filter(nota => nota >= 5);
-
 console.log(miArrayAprobados);
