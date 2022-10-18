@@ -41,22 +41,22 @@ let opcionUsuario = prompt("Las opciones son 1: mostrar el primer contacto, 2: m
 
 if (opcionUsuario != null){
     switch (opcionUsuario) {
-        case 1:
+        case '1':
             console.log(array[0]);//Mostramos la primera posición del array
 
             break;
     
-        case 2:
+        case '2':
             let ultimaPosicionArray = array.length-1;
             console.log(array[ultimaPosicionArray]);//Mostramos la última posición del array
             break;
 
-        case 3:
+        case '3':
             let nombreContacto = prompt ("Introduzca el nombre del nuevo contacto");
             let telefonoContacto = prompt("Introduzca el telefono del nuevo contacto");
             let correoContacto = prompt("Introduzca el correo del nuevo contacto");
 
-            if (nombre == null || telefono == null || correo == null) {
+            if (nombreContacto == null || telefonoContacto == null || correoContacto == null) {
                 do {
                     prompt("No has introducido todos los campos requeridos, por favor vuelvelos a introducir");
 
@@ -64,19 +64,19 @@ if (opcionUsuario != null){
                     telefonoContacto = prompt("Introduzca el telefono del nuevo contacto");
                     correoContacto = prompt("Introduzca el correo del nuevo contacto");
                     
-                } while (nombre == null || telefono == null || correo == null);
+                } while (nombreContacto == null || telefonoContacto == null || correoContacto == null);
 
                 array.push({
                     nombre: nombreContacto,
                     telefono: telefonoContacto,
                     correo: correoContacto
-                }
+                })
             } else{
                 array.push({
                     nombre: nombreContacto,
                     telefono: telefonoContacto,
                     correo: correoContacto
-                }
+                })
             }
     
             break;

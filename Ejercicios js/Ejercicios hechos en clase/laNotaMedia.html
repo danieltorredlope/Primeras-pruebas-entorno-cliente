@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    //Calcula la nota media con reduce
+    let arrayNotas = [5.2, 3.9, 6, 9.75, 7.5, 3];
+    let sumaNotas = arrayNotas.reduce((total,nota) => total += nota); //este es el total de la suma del array
+
+    let mediaNota = arrayNotas.reduce((suma,nota) => sumaNotas/arrayNotas.length); //Calculo de la nota media
+    console.log(mediaNota);
+</script>
+</html>
