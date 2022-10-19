@@ -25,16 +25,26 @@
         let miVentana
 
         function crearVentana() {
-            miVentana=window.open('http://www.google.com');
+            miVentana=window.open("","","width=400", "heigth=200");
         }
 
         function cerrarVentana() {
             miVentana.window.close();
         }
+
+        function redimesionarVentana() {
+            miVentana.window.resizeBy(-20,-10);
+        }
+
+        function moverVentana(){
+            miVentana.window.moveTo(100,100);
+        }
     </script>
 
     <button onclick=crearVentana()>Crea una nueva ventana</button>
     <button onclick=cerrarVentana()>Cierra ventana</button>
+    <button onclick=redimensionarVentana()>Redimensionar Ventana</button>
+    <button onclick=moverVentana()>Mover ventana</button>
 </body>
 
 </html>
