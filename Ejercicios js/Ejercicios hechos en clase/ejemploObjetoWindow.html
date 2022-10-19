@@ -13,8 +13,23 @@
         window.name ="Mi ventana";
         let texto="";
         texto += "<br/>Nombre: "+ window.name;
+        texto += "<br/>Ancho externo: "+ window.outerWidth;
+        texto += "<br/>Alto externo: "+ window.outerHeight;
+        texto += "<br/>Ancho interno: "+ window.innerWidth;
+        texto += "<br/>Alto interno: "+ window.innerHeight;
+        texto += "<br/>Distancia X: "+ window.screenX;
+        texto += "<br/>Distancia Y: "+ window.screenY;
         document.getElementById("ventana").innerHTML=texto;
+
+        //Ejemplo metodos de los objetos de navegador.
+        let miVentana
+
+        function crearVentana() {
+            miVentana=window.open('http://www.google.com');
+        }
     </script>
+
+    <button onclick=crearVentana()>Crea una nueva ventana</button>
 </body>
 
 </html>
