@@ -29,15 +29,32 @@
         }
 
         function cerrarVentana() {
-            miVentana.window.close();
+            if (miVentana.confirm("¿Estás seguro de cerrar la ventana?")==true){
+                miVentana.window.close();
+            } else{
+                alert("Has decidido no cerrar la ventana");
+            }
         }
 
-        function redimesionarVentana() {
+        function redimensionarVentana() {
             miVentana.window.resizeBy(-20,-20);
         }
 
         function moverVentana(){
             miVentana.window.moveTo(100,100);
+        }
+
+        function moverVentanaActual(){
+            miVentana.window.moveBy(100,100);
+        }
+
+        function enfocar(){
+            miVentana.focus();
+        }
+
+        function imprimir(){
+            print();//imprime ventana actual
+            miVentana.print();//imprime otra ventana
         }
     </script>
 
@@ -45,6 +62,9 @@
     <button onclick=cerrarVentana()>Cierra ventana</button>
     <button onclick=redimensionarVentana()>Redimensionar Ventana</button>
     <button onclick=moverVentana()>Mover ventana</button>
+    <button onclick=moverVentanaActual()>Mover ventana moveBy</button>
+    <button onclick=enfocar()>Enfocamos la ventana</button>
+    <button onclick=imprimir()>imprimir ventana</button>
 </body>
 
 </html>
