@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objeto window</title>
+</head>
+<body>
+    <p id="ventana"></p>
+
+    <script>
+        window.name ="Mi ventana";
+        let texto="";
+        texto += "<br/>Nombre: "+ window.name;
+        texto += "<br/>Ancho externo: "+ window.outerWidth;
+        texto += "<br/>Alto externo: "+ window.outerHeight;
+        texto += "<br/>Ancho interno: "+ window.innerWidth;
+        texto += "<br/>Alto interno: "+ window.innerHeight;
+        texto += "<br/>Distancia X: "+ window.screenX;
+        texto += "<br/>Distancia Y: "+ window.screenY;
+        document.getElementById("ventana").innerHTML=texto;
+
+        //Ejemplo metodos de los objetos de navegador.
+        let miVentana
+
+        function crearVentana() {
+            miVentana=window.open('http://www.google.com');
+        }
+
+        function cerrarVentana() {
+            miVentana.window.close();
+        }
+    </script>
+
+    <button onclick=crearVentana()>Crea una nueva ventana</button>
+    <button onclick=cerrarVentana()>Cierra ventana</button>
+</body>
+
+</html>
