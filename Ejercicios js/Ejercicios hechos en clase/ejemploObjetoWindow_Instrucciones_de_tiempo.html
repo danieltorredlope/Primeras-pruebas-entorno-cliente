@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objeto window, instrucciones de tiempo</title>
+</head>
+<body>
+    <h1>Instrucciones de tiempo</h1>
+    <p id="reloj"></p>
+    <script>
+        function saludar() {
+            alert("¡Buenos días!");
+        }
+
+        let int = setInterval(reloj,1000);
+        function reloj() {
+            let fecha = new Date(); //fecha actual
+            document.getElementById("reloj").innerHTML = fecha.getSeconds();
+            
+        }
+    </script>
+
+    <button onclick="setTimeout(saludar,4000)">Pulsar para saludar</button>
+     <!--setTimeout mete un delay a la ejecucion de la funcion indicada-->
+    <button onclick="setInterval(saludar,2000)">Pulsar para volver a saludar</button>
+     <!--setInterval se ejecuta constantemente en el intervalo indicado-->
+
+    <button onclick="clearTimeout(int)">Cancelar reloj</button>
+</body>
+</html>

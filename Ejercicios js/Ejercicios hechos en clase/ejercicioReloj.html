@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio reloj</title>
+</head>
+<body>
+    <h1>Ejercicio reloj</h1>
+    <p id="reloj" style="font-size: 100px; color: blue;"></p>
+
+    <script>
+        let int= setInterval(reloj,1000);
+        
+        function reloj() {
+          let miFecha = new Date(); 
+          
+          document.getElementById("reloj").innerHTML=miFecha.getHours()+":"+miFecha.getMinutes()+":"+miFecha.getSeconds();
+        }
+    </script>
+    <button onclick="clearTimeout(int)">Cancelar reloj</button>
+</body>
+</html>

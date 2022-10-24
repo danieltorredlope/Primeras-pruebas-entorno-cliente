@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objeto navigator</title>
+</head>
+<body>
+    <p id="navigator"></p>
+    <p id="pantalla"></p>
+    <script>
+        let navegador = "";
+        navegador += "<br/>Code name: "+ navigator.appCodeName;
+        navegador += "<br/>Name: "+ navigator.appName;
+        navegador += "<br/>Version: "+ navigator.appVersion;
+        navegador += "<br/>Motor: "+ navigator.product;
+        navegador += "<br/>Plataforma: "+ navigator.platform;
+        navegador += "<br/>Online: "+ navigator.onLine;
+        navegador += "<br/>Idioma: "+ navigator.language;
+        navegador += "<br/>Cookies: "+ navigator.cookieEnabled;
+        navegador += "<br/>UserAgent: "+ navigator.userAgent;
+        document.getElementById("navigator").innerHTML=navegador;   
+        alert("Java activado: "+navigator.javaEnabled());
+
+        let pantalla="";
+
+        //Tamaño pantalla
+        pantalla += "<br/>Ancho pantalla: "+ screen.width;
+        pantalla += "<br/>Alto pantalla: "+ screen.height;
+
+        //Tamaño pantalla sin barra de tareas
+        pantalla += "<br/>Ancho pantalla sin barra de tareas: "+ screen.availWidth;
+        pantalla += "<br/>Alto pantalla sin barra de tareas: "+ screen.availHeight;
+
+        //Profundidad de color de la pantalla
+        pantalla += "<br/>Profundidad: "+screen.colorDepth;
+
+        //Resolución color en bits por pixel
+        pantalla += "<br/>Resolución: "+screen.pixelDepth;
+
+        document.getElementById("pantalla").innerHTML=pantalla;
+        </script>
+</body>
+</html>

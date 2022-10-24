@@ -29,8 +29,18 @@ let listaContactos = [
     },
 ];
 
+let listaOpciones = [
+    "1. Mostrar el primer contacto\n"+
+    "2. Mostrar el último contacto\n"+
+    "3. Mostrar todos los contactos\n"+
+    "4. Añadir un nuevo contacto\n"+
+    "5. Salir del programa"
+]
+
+alert(listaOpciones);
+let opcionUsuario="";
 do {
-    let opcionUsuario = prompt("Las opciones son:\n 1 --> Mostrar el primer contacto\n 2 --> Mostrar el último contacto\n 3--> Mostrar todos los contactos\n 4 --> Añadir un nuevo contacto\n 5 --> Salir del programa");
+    opcionUsuario = prompt("Elige la opcion que desees");
     switch (opcionUsuario) {
         case '1':
             console.log(listaContactos[0]);//Mostramos la primera posición del array
@@ -52,7 +62,7 @@ do {
 
             if (nombreContacto == null || telefonoContacto == null || correoContacto == null) {
                 do {
-                    prompt("No has introducido todos los campos requeridos, por favor vuelvelos a introducir");
+                    alert("No has introducido todos los campos requeridos, por favor vuelvelos a introducir");
 
                     nombreContacto = prompt ("Introduzca el nombre del nuevo contacto");
                     telefonoContacto = prompt("Introduzca el telefono del nuevo contacto");
