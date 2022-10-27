@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Numero par o impar</title>
+</head>
+<body>
+    <script>
+        /*
+        let numero = prompt("Dame un numero");
+        function paridad(numero){
+            if (numero%2==0) {
+                return "El número "+numero+" es par";
+            }else{
+                return "El número "+numero+" es impar";
+            }
+
+        alert(paridad(numero));
+        }*/
+
+        let numero = prompt("Dame un numero");
+        let resultado = ((numero)=> numero == numero % 2==0 ? numero+=" es par" : numero+=" es impar");
+        console.log(resultado(numero));
+    </script>
+    
+</body>
+</html>
