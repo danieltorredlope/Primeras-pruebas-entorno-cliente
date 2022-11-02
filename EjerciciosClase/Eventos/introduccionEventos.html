@@ -6,10 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Introduccion eventos</title>
 </head>
-<body>
-    <script>
-    
-    </script>    
+<body onload="alert('La pagina se ha cargado correctamente')">
+    <h1>Modelo de registro de eventos tradicional</h1>
+    <h3 id="tradicional">Pulsa aqui para cambiar texto</h3>
+
+    <h1>Modelo de eventos avanzados del W3C</h1>
+    <h3 id="w3c">Modelo del W3C, pulsar para cambiar color</h3>
+
+    <a href="http://www.google.com" onclick="alertar(); return false;">Pulsa aquí para ver qué se ejecuta</a>
+    <a href="http://www.google.com" onclick="return preguntar()">Pulsa aquí para ver qué se ejecuta</a>
+
+    <p id="miTexto">Este texto lo voy a modificar</p>
+    <button id="miBoton">Pulsar</button>
+    <script src="introduccionEventos.js"></script>    
 </body>
 
 </html>
