@@ -1,4 +1,4 @@
-let caja = document.getElementById("caja");
+/*let caja = document.getElementById("caja");
 
 //creciente
 limite = Number(prompt("Selecciona el limete de filas"));
@@ -33,11 +33,15 @@ for(let i = limite-2; i >= 0; i--){
     }
     caja.innerHTML = caja.innerHTML + espacioHTML + asterisco + "<br>";
 }
-
+*/
 /*
-for(fila=1; fila<=8; fila=fila+2){
+let limite = Number(prompt("Selecciona el limete de filas"));
+let creciente = (limite/2)+1;
+let decreciente = limite - creciente;
+
+for(fila=1; fila<=limite; fila=fila+2){
     
-    for (columna = 1; columna <= 8-fila; columna++) {
+    for (columna = 1; columna <= limite-fila; columna++) {
          document.write("&nbsp");    
     }
     for (columna = 1; columna <= fila; columna++) {
@@ -46,9 +50,9 @@ for(fila=1; fila<=8; fila=fila+2){
     document.write("<br>")
 }
 
-for(fila=5; fila>=1; fila=fila-2){
+for(fila=creciente; fila>=1; fila=fila-2){
     
-    for (columna = 1; columna <= 8-fila; columna++) {
+    for (columna = 1; columna <= limite-fila; columna++) {
          document.write("&nbsp");    
     }
     for (columna = fila; columna >= 1; columna--) {
@@ -56,3 +60,31 @@ for(fila=5; fila>=1; fila=fila-2){
     }
     document.write("<br>")
 } */
+
+function pyramid(numPisos) {
+    /* Espacios que se debe empujar el asterisco*/
+    let spaces = numPisos - 1;
+    
+    /* Recorrer cada piso */
+    for (let i = 0; i < numPisos; i++) {
+      let piso = '';
+      
+      /* Agregar el número de espacios*/
+      for (let j = 0; j < spaces; j++) {      
+        piso += ' ';
+      }
+      
+      /* Agregar el número de asteriscos */
+      for (let k = 0; k <= i; k++) {      
+        piso += '*';
+      }
+      
+      /* Mostrar espacios y asteriscos por piso*/
+      console.log(piso)
+      
+      /* El siguiente piso tendrá un espacio menos */
+      spaces--;
+    } 
+  }
+  
+  pyramid(10);
