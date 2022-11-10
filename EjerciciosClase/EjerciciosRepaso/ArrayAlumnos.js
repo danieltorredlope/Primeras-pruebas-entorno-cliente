@@ -76,16 +76,6 @@ function introducirNota(){
     }  
 }
 
-/*function calcularNotaMedia(){
-    let notaTotal = 0 ;
-    let notaAlumno=0;
-    for(let i = 0; arrayAlumnos.length; i++){
-        notaAlumno = parseFloat(notaTotal)+ parseFloat(arrayAlumnos[i].nota);
-        notaTotal += notaAlumno;
-    }
-    notaMedia = notaTotal/arrayAlumnos.length;
-    alert(notaMedia);
-}*/
 
 function calcularMedia()
  {
