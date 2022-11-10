@@ -114,6 +114,7 @@ function calcularMedia()
         if (corregirNota.toUpperCase() == "SI") {
             notaCorregida = prompt("Introduce la nueva nota para el alumno");
             arrayAlumnos[i].nota = parseFloat(notaCorregida);
+            alert("Se ha corregido la nota del alumno: "+arrayAlumnos[i].nombre+", su nueva nota es: "+arrayAlumnos[i].nota);
         }
      }
      console.log(arrayAlumnos);
